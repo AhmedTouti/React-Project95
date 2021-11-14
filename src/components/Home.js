@@ -1,9 +1,23 @@
-import React, { component } from 'react'
+
+import React from 'react'
+import Contact from './Contact';
+import Navigation from './Navigation';
+import Slyder from './Slyder';
+
+
 
 
 const Home = (props) => {
-    return (<><h1>home</h1>
-        <h2>this when i started coding this project</h2>
+    return (<>
+        <Navigation />
+        //TODO fill gym info 'about section'
+        <Slyder id='about' />
+        
+        <Contact/>
+
+
+
+
     </>);
 }
 

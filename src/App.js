@@ -1,34 +1,28 @@
-import Home from './components/Home';
-import { Button,AppBar,BottomNavigation,BottomNavigationAction,IconButton} from '@mui/material';
-import Contact from './components/Contact';
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
-import Navigation from './components/Navigation';
-import Login from './components/Login';
-import SignIn from './components/SignIn';
-import Managment from './components/Managment';
-  //TODO bottom bar for social media icons
+import {AuthenticationYes,
+AuthenticationNo, 
+AdministrationYes,
+AdministrationNo} from './components/APPDATA/GLOBALdataREDUX';
+import SignIn from './components/HomeComponent/SignIn'
+import {regester ,Login,Logout,GetData, UpdateData,DeleteData} from './components/APPDATA/DataBaseHandler';
+import { usersCollectionRef,blogCollectionRef } from './components/APPDATA/FireBaseDB';
+
+
+//TODO bottom bar for social media icons
 
 function App() {
-    return (
-        <div className="App">
 
-
-
-           <Managment/>  
-
-
-
-
-    
-           {/* <AppBar position="fixed" sx={{ top: 'auto', bottom: 0 }}>
-               <Button >test</Button>
-        
-      </AppBar> */}
-
-
-
-        </div>
-    );
+ //Login('ahmedtalib690@gmail.com','1234567889')
+  const statedata = useSelector(state => state);
+  console.log(statedata.auth);
+  console.log(AuthenticationYes);
+  return (
+    <div className="App">
+      <h1>this is app.js</h1>
+      <button onClick={()=>{DeleteData('USERS','AmkPC8cxuKbMZ2dWtI1HAH5Ert72')}}>testAUTH</button>
+    </div>
+  );
 }
 
 export default App;

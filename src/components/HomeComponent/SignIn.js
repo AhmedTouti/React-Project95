@@ -38,6 +38,9 @@ const SignIn = () => {
                 <TextField id='Login' label="Login" variant="outlined" ></TextField>
             </Grid>
             <Grid item lg={12} xs={12} >
+                <TextField id='Email' label="Email" variant="outlined" ></TextField>
+            </Grid> 
+            <Grid item lg={12} xs={12} >
                 <TextField id='PassWord' label="PassWord" variant="outlined" ></TextField>
             </Grid>
             <Grid item lg={12} xs={12} >

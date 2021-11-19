@@ -1,11 +1,12 @@
-import Navigation from "./Navigation";
+import Navigation from "../HomeComponent/Navigation";
 import RoomIcon from '@material-ui/icons/Room';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid';
 import { Button } from "@material-ui/core";
+
 //TODO grid with data from firebase
 
-
+/*
 const rows: GridRowsProp = [
     { id: 1, col1: 'Hello', col2: 'World' , col3: 'World' , col4: 'World' , col5: 'World' },
     { id: 2, col1: 'DataGridPro', col2: 'is Awesome' },
@@ -44,13 +45,16 @@ const columns: GridColDef[] = [
     { field: 'col5', headerName: 'LastName', width: 150 },
 
 ];
+*/
 
 
 const Managment = () => {
+    
     return (<><Navigation />
 
 
-            <DataGrid rows={rows} columns={columns} />
+            {/* <DataGrid rows={rows} columns={columns} /> */}
+
         
      
     </>);

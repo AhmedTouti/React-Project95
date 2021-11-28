@@ -4,20 +4,15 @@ import Contact from './Contact';
 import Navigation from './Navigation';
 import Slyder from './Slyder';
 
+//TODO fill gym info 'about section'
 
 
 
 const Home = (props) => {
     return (<>
-        <Navigation />
-        //TODO fill gym info 'about section'
-        <Slyder id='about' />
-        
-        <Contact/>
-
-
-
-
+        {/* <Slyder id='about' />
+        <Contact /> */}
+        <h1>this is home</h1>
     </>);
 }
 

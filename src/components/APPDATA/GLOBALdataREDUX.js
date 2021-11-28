@@ -1,36 +1,26 @@
 import { createStore } from 'redux';
 //TODO adding user/admin  id
 const initState = {
-    auth: false, admin: false
+    auth: false, admin: false, name: ''
 }
 export const AuthenticationYes = 'AuthenticationYes'
-export const AuthenticationNo='AuthenticationYes'
-export const AdministrationYes='AdministrationYes'
-export const AdministrationNo ='AdministrationNo';
+export const AuthenticationNo = 'AuthenticationNo'
+export const AdministrationYes = 'AdministrationYes'
 
 
-const DATAreduser = (state = initState, action)=>{
+const DATAreduser = (state = initState, action) => {
     switch (action.type) {
         case AuthenticationYes:
-            return {auth:true,admin:false}
-
-        
+            localSetter(AuthenticationYes,action.name);            
+            return { auth: true, admin: false, name: action.name }
         case AuthenticationNo:
-            return {auth:false,admin:false}
-
-            
+            localStorage.clear();
+            return initState 
         case AdministrationYes:
-            return {auth:true,admin:true}
-
-            
-
-        case AdministrationNo:
-            return {auth:false,admin:false}
-
-            
-
+            localSetter(AdministrationYes,action.name);
+            return { auth: true, admin: true, name: action.name }
         default:
-            return state 
+            return state
     }
 }
 const store = createStore(DATAreduser);
@@ -38,6 +28,7 @@ const store = createStore(DATAreduser);
 
 
 export default store
+ let localSetter=(type,name)=>{localStorage.setItem('type',type);localStorage.setItem('name',name);}
 
 
 

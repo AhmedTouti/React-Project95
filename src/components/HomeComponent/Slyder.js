@@ -1,7 +1,7 @@
 import { Carousel } from "react-bootstrap";
-import first from './Images/first.jpg'
-import second from './Images/second.jpg'
-import therd from './Images/therd.jpg'
+import first from '../Images/first.jpg'
+import second from '../Images/second.jpg'
+import therd from '../Images/therd.jpg'
 
 
 const Slyder = () => {

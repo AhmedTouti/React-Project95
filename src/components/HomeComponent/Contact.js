@@ -9,8 +9,8 @@ import Box from '@mui/material/Box';
 const Contact = () => {
     return (<>
 
-<Container>
-        <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+
+        {/* <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
             <Grid container spacing={4}>
                 <Grid item lg={12}  md={12} xs={12} >
                     <Box
@@ -52,7 +52,7 @@ const Contact = () => {
                 </Grid>
 
                 <Grid item md={12} xs={12}  lg={12} >
-            <Button onclick={() => { console.log('btn click') }} variant="contained" size="large">
+            <Button onClick={()=>{}} variant="contained" size="large">
                 Send
             </Button>
 
@@ -61,11 +61,11 @@ const Contact = () => {
             </Grid>
 
         </form>
+ */}
 
 
 
-
-        </Container>
+     
 
     </>);
 }
